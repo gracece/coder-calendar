@@ -157,7 +157,7 @@ function showLucky()
   $result .= "\n不宜:\n";
   for ($i=0; $i < $numBad; $i++)
   {
-    $result .= $i.".「".$eventArr[$i]['name']."」".$eventArr[$i]['bad']."\n";
+    $result .= $i.".「".$eventArr[$i+$numGood]['name']."」".$eventArr[$i+$numGood]['bad']."\n";
   }
 
   $result .= "\n座位朝向:\n";
@@ -169,5 +169,6 @@ function showLucky()
   $result .= star(random($iday,6) % 5 +1);
   return $result;
 }
+
 
 
